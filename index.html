@@ -152,6 +152,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   .about,.proj.wide,.edu{grid-template-columns:1fr}
   .projects{grid-template-columns:1fr}
   .proj.wide{grid-column:auto}
+  .proj.wide > .viz{order:2}
   .skills{grid-template-columns:1fr}
   section{padding:88px 0}
 }
@@ -300,6 +301,45 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <li>Validated transformations with Pandas and Spark SQL before release</li>
       </ul>
       <div class="chips"><span class="chip">Airflow</span><span class="chip">Spark SQL</span><span class="chip">Amazon S3</span><span class="chip">Hive</span></div>
+    </article>
+
+    <article class="proj wide reveal">
+      <div class="viz" aria-hidden="true">
+        <svg viewBox="0 0 420 260" font-family="JetBrains Mono, monospace" font-size="10">
+          <defs><linearGradient id="g4" x1="0" x2="1"><stop offset="0" stop-color="#7cc4ff"/><stop offset="1" stop-color="#b79cff"/></linearGradient></defs>
+          <text x="10" y="20" fill="#9aa1b2" font-size="11">Pipeline</text>
+          <g fill="#141821" stroke="#2a3142">
+            <rect x="10" y="32" width="70" height="40" rx="8"/><rect x="92" y="32" width="70" height="40" rx="8"/><rect x="174" y="32" width="70" height="40" rx="8"/><rect x="256" y="32" width="56" height="40" rx="8"/>
+          </g>
+          <rect x="324" y="32" width="86" height="40" rx="8" fill="url(#g4)" opacity=".18" stroke="url(#g4)"/>
+          <g fill="#c7cde0" text-anchor="middle">
+            <text x="45" y="50">25K</text><text x="45" y="63" fill="#6b7285">images</text>
+            <text x="127" y="50">Histogram</text><text x="127" y="63" fill="#6b7285">equalize</text>
+            <text x="209" y="50">Auto-</text><text x="209" y="63" fill="#6b7285">encoder</text>
+            <text x="284" y="56">CNN</text>
+            <text x="367" y="50" fill="#e8eaf0">5 classes</text><text x="367" y="63" fill="#9aa1b2">lung/colon</text>
+          </g>
+          <g stroke="#7cc4ff" stroke-width="1.5" class="flow-dash"><path d="M80 52H92"/><path d="M162 52H174"/><path d="M244 52H256"/><path d="M312 52H324"/></g>
+          <text x="10" y="112" fill="#9aa1b2" font-size="11">Results</text>
+          <g font-size="11">
+            <text x="10" y="141" fill="#9aa1b2">ROC AUC</text><rect x="100" y="130" width="260" height="14" rx="4" fill="#232836"/><rect class="bar" x="100" y="130" width="257.6" height="14" rx="4" fill="url(#g4)"/><text x="368" y="141" fill="#e8eaf0">0.991</text>
+            <text x="10" y="171" fill="#9aa1b2">Precision</text><rect x="100" y="160" width="260" height="14" rx="4" fill="#232836"/><rect class="bar" x="100" y="160" width="232.7" height="14" rx="4" fill="url(#g4)"/><text x="368" y="171" fill="#e8eaf0">0.895</text>
+            <text x="10" y="201" fill="#9aa1b2">Recall</text><rect x="100" y="190" width="260" height="14" rx="4" fill="#232836"/><rect class="bar" x="100" y="190" width="230.6" height="14" rx="4" fill="url(#g4)"/><text x="368" y="201" fill="#e8eaf0">0.887</text>
+            <text x="10" y="231" fill="#9aa1b2">Accuracy</text><rect x="100" y="220" width="260" height="14" rx="4" fill="#232836"/><rect class="bar" x="100" y="220" width="230.6" height="14" rx="4" fill="url(#g4)"/><text x="368" y="231" fill="#e8eaf0">0.887</text>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div class="kicker">UNT · DTSC 5082 · DEEP LEARNING · TEAM OF 6</div>
+        <h3>Lung &amp; Colon Cancer Detection</h3>
+        <p>An autoencoder-embedded CNN with histogram equalization that classifies histopathology images into five tissue classes: benign lung, lung adenocarcinoma, lung squamous cell carcinoma, colon adenocarcinoma and benign colon.</p>
+        <ul>
+          <li>25,000 balanced Kaggle histopathology images (5,000 per class), merged from lung and colon sets</li>
+          <li>Histogram equalization for contrast, then an autoencoder feeding a CNN classifier trained with Adam and categorical cross-entropy</li>
+          <li>Reached 0.991 ROC AUC with 0.895 precision and 0.887 recall and accuracy in 10 epochs; also served predictions on newly uploaded images</li>
+        </ul>
+        <div class="chips"><span class="chip">Python</span><span class="chip">TensorFlow / Keras</span><span class="chip">CNN</span><span class="chip">Autoencoders</span><span class="chip">Computer vision</span></div>
+      </div>
     </article>
 
     <article class="proj wide reveal">
